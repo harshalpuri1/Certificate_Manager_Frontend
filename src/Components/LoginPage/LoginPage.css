@@ -1,0 +1,227 @@
+.login-signup-page {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(/public/assets/Images/Frame.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.logo1 {
+    position: absolute;
+    display: flex;
+    left: 100px;
+    top: 60px;
+}
+
+.logo1 img:nth-of-type(1) {
+    margin-top: 40px;
+    height: 75px;
+    width: 75px;
+}
+
+.logo1 h1 {
+    margin-top: 58px;
+    height: 39px;
+    width: 120px;
+}
+
+.loginbox {
+    border: 1px solid rgb(192, 192, 192);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    right: 10%;
+}
+
+.loginbox h2 {
+    margin-bottom: 0;
+    font-size: 20px;
+    text-align: left;
+}
+
+.loginbox h3 {
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+}
+
+.loginbox p {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+}
+
+.formInput {
+    margin-bottom: 20px;
+
+}
+
+.formInput Img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.formInput label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+.formInput input {
+    width: 275px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    background-color: #f9f9f9;
+}
+
+.formInput input:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.formLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.formLinks {
+    font-size: 14px;
+    align-items: center;
+}
+
+.formLinks input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.formLinks span {
+    color: rgb(74, 74, 74);
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.formLinks span:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #003366;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.form-footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.form-footer p {
+    margin-top: 31px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    text-align: center;
+    color: #8a8989;
+}
+
+.form-footer span {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-footer span:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -3px;
+    position: absolute;
+
+}
+
+.logo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    flex: 1;
+}
+
+.password-wrapper span {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media (max-width: 780px) {
+    .logo1 {
+        top: 20px;
+    }
+
+    .loginbox {
+        right: auto;
+        left: auto;
+    }
+}
+
+@media (max-height: 760px) and (max-width: 780px) {
+    .logo1 {
+        position: absolute;
+        top: 10px;
+    }
+
+    .loginbox {
+        right: auto;
+        top: 150px;
+        bottom: 100px;
+    }
+}

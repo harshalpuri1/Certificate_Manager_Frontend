@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.certificate-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+}
+
+.Login-Signup-page {
+  background: none;
+}
+
+.layout-options {
+  display: flex;
+  align-items: center;
+  margin: 50px;
+  gap: 20px;
+}
+
+.landscape-option,
+.portrait-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #FFFFFF;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.landscape-option.selected,
+.portrait-option.selected {
+  display: flex;
+  border: 2px solid #132A52;
+}
+
+.landscape-option {
+  background-color: #FFFFFF;
+}
+
+.landscape-shape {
+  width: 42px;
+  height: 20px;
+  background-color: #5975A4;
+  border-radius: 3px;
+}
+
+.portrait-option {
+  background-color: #F5F5F5;
+}
+
+.portrait-shape {
+  width: 27px;
+  height: 34px;
+  background-color: #D9D9D9;
+  border-radius: 7px;
+  margin-right: 5px;
+}
+
+.option-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #132A52;
+  margin-left: 10px;
+}
+
+.logout-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #132A52;
+  margin-right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.generate-btn {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #132A52;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 130px;
+  right: 45px;
+}
+
+.certificate-display {
+  margin-top: 100px;
+  margin-left: 4rem;
+}
+
+.preview-section {
+  width: 800px;
+  height: 554px;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-preview {
+  width: 100%;
+  height: 525px;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-preview img {
+  width: 100%;
+  height: 100%;
+}
+
+.certificate-templates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 760px;
+  margin-left: 4rem;
+  margin-top: 10px;
+  background-color: #F5F5F5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.template-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 20px;
+  left: 20px;
+  margin-left: 20px;
+  height: 175px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.template-box img {
+  height: 150px;
+  width: 210px;
+  object-fit: cover;
+}
+
+.edit-certificate {
+  position: absolute;
+  width: 500px;
+  top: 200px;
+  left: 900px;
+  right: 0;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid #647BA2;
+  padding: 20px;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  color: #132A52;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label-box {
+  background: #8A9CBD;
+  border-radius: 10px;
+  padding: 25px 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #132A52;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  width: 94%;
+  height: 45px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #8A9CBD;
+  padding-left: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  background: #FFFFFF;
+  color: #132A52;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+textarea.form-input {
+  height: 120px;
+}
+
+.upload-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: auto;
+}
+
+.upload-icon {
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+  border-radius: 10px;
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+}
+.add-name-icon{
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+  border-radius: 10px;
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+}
+.remove-name-button{
+  display: inline-flex;
+  margin-left: 10px;
+  height: fit-content;
+  width: 20px;
+}
+.name-chip >img{
+
+align-items: center;
+}
+.certificate-preview-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.certificate-texts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.top-description {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  justify-content: space-around;
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 0 10px;
+}
+
+.recipient-name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: serif;
+  font-size: 34px;
+  justify-content: space-around;
+  padding-bottom: 5px;
+  width: 90%;
+
+}
+
+.description {
+  margin: 0 100px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  word-wrap: break-word;
+  width: 80%;
+}
+
+.date-certified-container {
+  display: flex;
+  justify-content: space-between;
+  height: 74%;
+  align-items: flex-end;
+  margin: 0 150px;
+  padding: 6px;
+}
+
+.date {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+.certified-by {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+.certificate-logo {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.certificate-manager-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate-signature {
+  width: 90px;
+}
+
+.info-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 33%;
+  align-items: center;
+
+}
+
+.form-group {
+  position: relative;
+}
+
+.template-box.active {
+  background-color: #E3EBF9;
+  border: 1px solid #647BA2;
+}

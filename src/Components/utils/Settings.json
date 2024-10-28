@@ -1,0 +1,58 @@
+{
+    "settingsTitle": "Settings",
+    "saveButtonText": "Save",
+    "profileTitle": "PROFILE",
+    "wisdomGroup": "WISDOM GROUP",
+    "profileDetail": "This school is created for design purpose. This school is created for design purpose. This school is created for design purpose.",
+    "phoneno": "+91 6485247653",
+    "email": "wisdomgroupofinstitutions@gmail.com",
+    "address": "45, 2nd Main Road, #rs cross, JP Nagar, Phase 5",
+    "applicationsTitle": "APPLICATIONS",
+    "addButton": "Add",
+    "applicationHeader": "APPLICATION",
+    "apiKeyHeader": " API KEY",
+    "secretKeyHeader": " SECRET KEY",
+    "urlButton": "URL",
+    "toastcopy": "Key copied to clipboard!",
+    "toasterror": "Failed to copy Key.",
+
+    "applications" : [
+      {
+        "applicationName": "Application 1",
+        "apiKey": "alb2c33d4e5f6g7h8i9j",
+        "secretKey": "abc123"
+        
+      },
+      {
+        "applicationName": "Application 2",
+        "apiKey": "alb2c33d4e5f6g7h8i9j",
+        "secretKey": "xyz789"
+        
+      },
+      {
+        "applicationName": "Application 3",
+        "apiKey": "alb2c33d4e5f6g7h8i9j",
+        "secretKey": "pqr456"
+        
+      },
+      {
+        "applicationName": "Application 4",
+        "apiKey": "alb2c33d4e5f6g7h8i9j",
+        "secretKey": "pqr456"
+        
+      },
+      {
+        "applicationName": "Application 5",
+        "apiKey": "alb2c33d4e5f6g7h8i9j",
+        "secretKey": "pqr456"
+        
+      },
+      {
+        "applicationName": "Application 6",
+        "apiKey": "alb2c33d4e5f6g7h8i9j",
+        "secretKey": "pqr456"
+
+      }
+    ]
+  }
+  

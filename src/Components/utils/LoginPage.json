@@ -1,0 +1,21 @@
+{
+    "cGen":"C-Gen",
+    "welcome":"Welcome !",
+    "intro":"Sign in to",
+    "signup":"/signup",
+    "forgotpass":"/forgot",
+    "disc":"Lorem ipsum dolor sit.",
+    "username":"User name",
+    "username1":"username",
+    "enterUsername":"Enter your user name",
+    "password":"Password",
+    "enterPassword":"Enter your Password",
+    "remember":"Remember me",
+    "remember1":"remember",
+    "Forgot":"Forgot Password?",
+    "Login":"Login",
+    "not-account":"Don't have an Account? ",
+    "Register":"  Register",
+    "validUsername":"'Please enter a valid username.'",
+    "validPassword":"'Please enter a valid password.'"
+}

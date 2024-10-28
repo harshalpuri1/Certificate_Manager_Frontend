@@ -1,0 +1,16 @@
+{
+  "successTitle": "HURRAY !!!",
+  "successMessage" : "You have successfully generated your certificate",
+  "editFileTitle": "Do you want to edit this file?",
+  "editButtonText": "Edit file",
+  "downloadImageButtonText": "Download image",
+  "downloadPdfButtonText": "Download PDF",
+  "fileLabel": "File:",
+  "fileInfo": "1049 X 651 / JPG / PNG / PDF",
+  "licenseLabel": "License:",
+  "licenseType": "Free",
+  "moreDetails": "More details",
+  "issueFound": "Any issues found?",
+  "reportLabel": "Report"
+    
+}

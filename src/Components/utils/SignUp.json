@@ -1,0 +1,23 @@
+{
+    "cGen":"C-Gen",
+    "welcome":"Welcome !",
+    "intro":"Sign up to",
+    "signin":"/",
+    "disc":"Lorem ipsum dolor sit.",
+    "email":"Email",
+    "email1":"email",
+    "enterEmail":"Enter your Email",
+    "password":"Password",
+    "password1":"Confirm Password",
+    "enterPassword":"Enter your Password",
+    "entercnfrmPassword":"Confirm your Password",
+    "Submit":"Submit",
+    "alrdyAcc":"Already have an account",
+    "not-account":"Don't have an account",
+    "Signin":"  Signin",
+    "errorMail":" Email is required!",
+    "errorFormat": "This is not a valid email format!",
+    "errorPassword": "Please enter your password",
+    "errorCnfrmpassword": "  Confirm your password",
+    "errorNotMatched": "Password do not match"
+}

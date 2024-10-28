@@ -1,0 +1,17 @@
+{
+    "settingsButtonAlt": "Settings",
+    "logoutButton": "Logout",
+    "editCertificateTitle": "Edit Certificate",
+    "LogoLabel":"Logo",
+    "signatureLabel":"Signature",
+    "GenerateButton":"Generate",
+    "dateLabel": "Date",
+    "recipientNameLabel": "Recipient Name",
+    "topDescriptionLabel": "Top Description",
+    "certifiedByLabel": "Certified By",
+    "descriptionLabel": "Description",
+    "noRecipientNames":"No recipient name provided",
+    "genCertificate":"Generating certificates...",
+    "certificateGenSucc": "Certificates generated successfully.",
+    "errGenCertificate": "Error generating certificates"
+}

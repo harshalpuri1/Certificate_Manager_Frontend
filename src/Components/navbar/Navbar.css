@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.nav-container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #FFFFFF;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 150px;
+    height: 50px;
+    border: 1.5px solid transparent;
+    margin-top: 10px ;
+  }
+  
+  .logo-text {
+    margin-left: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #132A52;
+    margin-top: 0.75px ;
+  }
+  
+  
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .settings-button {
+    background-color: transparent; 
+    border: none; 
+    padding: 0; 
+    cursor: pointer; 
+  }
+  
+  .settings-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+   
+  }
+  
+  .disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+  
+  .logout-button {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #132A52;
+    margin-right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    text-decoration: underline;
+  }
+  .user-icon {
+    width: 57px;
+    height: 57px;
+    border-radius: 38.5px;
+    object-fit: cover;
+  }
+  
