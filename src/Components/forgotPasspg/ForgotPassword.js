@@ -3,13 +3,9 @@ import { useNavigate } from "react-router-dom";
 import strings from "../utils/ForgotPassword.json";
 import api from "../services/api";
 import { toast } from "react-toastify";
-import constants from "../utils/config/config";
-
 function ForgotPassword() {
   const [email, setEmail] = useState("");
-  const [otp, setOtp] = useState("");
-  const [newPassword, setNewPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState(""); // Add confirm password
+  const [otp, setOtp] = useState(""); 
   const [step, setStep] = useState(1); // Track the step in the forgot password flow
   const [errors, setErrors] = useState({});
   const nav = useNavigate();
