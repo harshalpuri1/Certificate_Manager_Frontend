@@ -1,4 +1,4 @@
-const baseURL= "http://localhost:4000/api/v1";
+const baseURL= "https://certificate-manager-backend.onrender.com";
 const services =  {
 baseURL
 }
