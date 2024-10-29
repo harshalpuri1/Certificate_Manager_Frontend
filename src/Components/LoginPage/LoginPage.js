@@ -35,6 +35,7 @@ function LoginPage() {
     e.preventDefault();
 
     if (formValidation()) {
+      const toastId = toast.loading(strings.loginto);
       try {
         const body = {
           email: username,
@@ -50,9 +51,30 @@ function LoginPage() {
             constants.localStorage.token,
             response.body.token
           );
+          toast.update(toastId, {
+            render: response.body.message,
+            type: "success",
+            isLoading: false,
+            autoClose: 3000,
+          });
           nav(constants.navigationLink.certificate);
         }
       } catch (error) {
+        if (toast.isActive(toastId)) {
+          toast.update(toastId, {
+            render: error.message,
+            type: "error",
+            isLoading: false,
+            autoClose: 3000,
+          });
+        } else {
+          toast.update(toastId, {
+            render: error.message,
+            type: "error",
+            isLoading: false,
+            autoClose: 3000,
+          });
+        }
         toast.error(constants.constantsErrors.somethingWentWrong, {
           toastId: constants.constantsErrors.toastId,
         });

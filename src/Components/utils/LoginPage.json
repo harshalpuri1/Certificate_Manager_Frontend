@@ -17,5 +17,6 @@
     "not-account":"Don't have an Account? ",
     "Register":"  Register",
     "validUsername":"'Please enter a valid username.'",
-    "validPassword":"'Please enter a valid password.'"
+    "validPassword":"'Please enter a valid password.'",
+    "loginto":"Logging in, please wait..."
 }
