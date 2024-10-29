@@ -210,6 +210,7 @@
     .loginbox {
         right: auto;
         left: auto;
+        top: 150px;
     }
 }
 
@@ -222,6 +223,6 @@
     .loginbox {
         right: auto;
         top: 150px;
-        bottom: 100px;
+        bottom: 50px;
     }
 }

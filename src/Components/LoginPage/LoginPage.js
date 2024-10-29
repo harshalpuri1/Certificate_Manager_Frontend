@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import "./LoginPage.css";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +13,6 @@ function LoginPage() {
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const nav = useNavigate();
-
 
   const formValidation = () => {
     const newErrors = {};
@@ -58,6 +57,8 @@ function LoginPage() {
             autoClose: 3000,
           });
           nav(constants.navigationLink.certificate);
+        } else {
+          throw new Error(strings.userNotExist);
         }
       } catch (error) {
         if (toast.isActive(toastId)) {
@@ -68,16 +69,8 @@ function LoginPage() {
             autoClose: 3000,
           });
         } else {
-          toast.update(toastId, {
-            render: error.message,
-            type: "error",
-            isLoading: false,
-            autoClose: 3000,
-          });
+          toast.error(constants.constantsErrors.somethingWentWrong);
         }
-        toast.error(constants.constantsErrors.somethingWentWrong, {
-          toastId: constants.constantsErrors.toastId,
-        });
       }
     }
   };
@@ -136,7 +129,9 @@ function LoginPage() {
                 <input type="checkbox" name={strings.username1} />
                 {strings.remember}
               </label>
-              <span onClick={() => nav(strings.forgotpass)}>{strings.Forgot}</span>
+              <span onClick={() => nav(strings.forgotpass)}>
+                {strings.Forgot}
+              </span>
             </div>
             <button type="submit" className="btn">
               {strings.Login}
