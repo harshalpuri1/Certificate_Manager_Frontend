@@ -3,8 +3,6 @@
 .certificate-page {
   font-family: 'Poppins', sans-serif;
   background-color: #FFFFFF;
-  display: flex;
-  align-items: flex-start;
   box-sizing: border-box;
 }
 
