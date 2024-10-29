@@ -42,14 +42,10 @@
 .certificate-display {
   margin-top: 100px;
   margin-left: 4rem;
-  width: 800px;
-  height: 525px;
   margin-bottom: 50px;
 }
 
 .preview-section {
-  width: 800px;
-  height: 554px;
   background-color: #F5F5F5;
   border-radius: 10px;
   display: flex;
@@ -74,11 +70,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  width: 760px;
+  width: 650px;
   margin-left: 4rem;
   margin-top: 10px;
   background-color: #F5F5F5;
-  padding: 20px;
   border-radius: 10px;
 }
 
@@ -88,7 +83,6 @@
   align-items: center;
   right: 20px;
   left: 20px;
-  margin-left: 20px;
   height: 175px;
   border-radius: 5px;
   overflow: hidden;
@@ -96,17 +90,15 @@
 }
 
 .template-box img {
-  height: 150px;
-  width: 210px;
+  width: 185px;
   object-fit: cover;
 }
 
 .edit-certificate {
   position: absolute;
-  width: 500px;
   top: 200px;
-  left: 900px;
-  right: 0;
+  left: 750px;
+  right: 45px;
   border-radius: 10px;
   background: #FFFFFF;
   border: 1px solid #647BA2;
@@ -133,6 +125,7 @@ h2 {
   color: #132A52;
   margin-top: 15px;
   margin-bottom: 10px;
+
 }
 
 .form-input {
@@ -173,7 +166,8 @@ textarea.form-input {
   height: 65px;
   object-fit: cover;
 }
-.add-name-icon{
+
+.add-name-icon {
   position: absolute;
   right: 5px;
   bottom: 3px;
@@ -182,20 +176,22 @@ textarea.form-input {
   height: 65px;
   object-fit: cover;
 }
-.remove-name-button{
+
+.remove-name-button {
   display: inline-flex;
   margin-left: 10px;
   height: fit-content;
   width: 20px;
 }
-.name-chip >img{
 
-align-items: center;
+.name-chip>img {
+
+  align-items: center;
 }
+
 .certificate-preview-container {
   position: relative;
-  width: 800px;
-  height: 525px;
+  width: 650px;
   overflow: hidden;
 }
 
@@ -301,4 +297,106 @@ align-items: center;
 .template-box.active {
   background-color: #E3EBF9;
   border: 1px solid #647BA2;
+}
+
+@media (max-width: 768px) {
+
+  /* Make all components flow vertically on small screens */
+  .certificate-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .certificate-display {
+    margin: 10px;
+    margin-top: 0;
+  }
+
+  .certificate-preview-container,
+  .certificate-templates,
+  .edit-certificate {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .certificate-preview-container {
+    margin-top: 20px;
+  }
+
+  .certificate-templates {
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    ;
+    gap: 5px;
+  }
+
+  .edit-certificate {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 20px;
+  }
+
+  .generate-btn {
+    position: static;
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* Adjust layout for tablet */
+  .certificate-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .certificate-display {
+    margin: 10px;
+    margin-top: 0;
+  }
+
+  .certificate-preview-container,
+  .certificate-templates,
+  .edit-certificate {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .certificate-preview-container {
+    margin-top: 20px;
+  }
+
+  .certificate-templates {
+    margin-top: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+  }
+
+  .edit-certificate {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 20px;
+  }
+
+  .generate-btn {
+    position: static;
+    width: 80%;
+    height: 45px;
+    font-size: 15px;
+    margin-top: 20px;
+  }
 }
