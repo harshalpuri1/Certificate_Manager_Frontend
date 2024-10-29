@@ -204,25 +204,24 @@
 
 @media (max-width: 780px) {
     .logo1 {
-        top: 20px;
+        top: 10px;
     }
 
     .loginbox {
         right: auto;
         left: auto;
-        top: 150px;
+        top: 170px;
     }
 }
 
 @media (max-height: 760px) and (max-width: 780px) {
     .logo1 {
         position: absolute;
-        top: 10px;
+        top: 5px;
     }
 
     .loginbox {
         right: auto;
         top: 150px;
-        bottom: 50px;
     }
 }
