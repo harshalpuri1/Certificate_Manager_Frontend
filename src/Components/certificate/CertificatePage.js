@@ -61,6 +61,28 @@ const Certificate = () => {
   const [image, setImage] = useState(null);
   const [names, setNames] = useState([]);
   const [namesParams] = useSearchParams();
+  const [hasShownAlert, setHasShownAlert] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 769 && !hasShownAlert) {
+        alert("Rotate your phone for a better experience");
+        setHasShownAlert(true);
+      } else if (window.innerWidth >= 769 && hasShownAlert) {
+        setHasShownAlert(false);
+      }
+    };
+
+    // Check on initial load
+    handleResize();
+
+    // Update on window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, [hasShownAlert]);
+
 
   useEffect(() => {
     const extractNamesFromURL = () => {

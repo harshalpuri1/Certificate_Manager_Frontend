@@ -99,7 +99,8 @@
 
 .edit-certificate {
   position: absolute;
-  width: 33%;
+  width: 100%;
+  max-width: 500px;
   top: 200px;
   left: 900px;
   right: 45px;
@@ -119,7 +120,6 @@ h2 {
 .form-group {
   margin-bottom: 15px;
 }
-
 .label-box {
   background: #8A9CBD;
   border-radius: 10px;
@@ -129,12 +129,12 @@ h2 {
   color: #132A52;
   margin-top: 15px;
   margin-bottom: 10px;
-
+  box-sizing: border-box; /* Ensures padding is included in the box model */
 }
 
 .form-input {
-  width: 94%;
-  height: 45px;
+  width: 100%; /* Full width to match label box */
+  height: 70px;
   padding: 12px;
   border-radius: 10px;
   border: 1px solid #8A9CBD;
@@ -143,11 +143,10 @@ h2 {
   font-size: 15px;
   background: #FFFFFF;
   color: #132A52;
-  display: flex;
+  box-sizing: border-box; /* Include padding and border in width */
   align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
 }
+
 
 textarea.form-input {
   height: 120px;
@@ -176,8 +175,8 @@ textarea.form-input {
   right: 5px;
   bottom: 3px;
   border-radius: 10px;
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
 }
 
@@ -195,9 +194,12 @@ textarea.form-input {
 
 .certificate-preview-container {
   position: relative;
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  padding: 20px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .certificate-texts {
@@ -213,10 +215,9 @@ textarea.form-input {
 .top-description {
   text-align: center;
   font-family: 'Georgia', serif;
-  font-size: 24px;
+  font-size: 35px;
   justify-content: space-around;
   white-space: normal;
-  word-wrap: break-word;
   padding: 0 10px;
 }
 
@@ -237,7 +238,6 @@ textarea.form-input {
   text-align: center;
   font-family: 'Arial', sans-serif;
   font-size: 16px;
-  word-wrap: break-word;
   width: 80%;
 }
 
@@ -311,35 +311,35 @@ textarea.form-input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
   }
 
   .certificate-display {
     margin: 10px;
     margin-top: 0;
   }
-
-  .certificate-preview-container,
-  .certificate-templates,
-  .edit-certificate {
+  .template-box img{
+    width: 100%;
+  }
+  .certificate-preview-container{
     width: 100%;
     margin-left: 0;
-  }
-
-  .certificate-preview-container {
     margin-top: 20px;
   }
 
   .certificate-templates {
+    width: 100%;
     margin-top: 10px;
     grid-template-columns: repeat(2, 1fr);
-    ;
-    gap: 5px;
+    gap: 10px;
+    box-sizing: border-box;
+    margin-left: 0;
   }
 
   .edit-certificate {
     position: relative;
-    width: 80%;
+    max-width: 90%;
+    width: 500px;
     top: 0;
     left: 0;
     right: 0;
@@ -374,27 +374,28 @@ textarea.form-input {
   .certificate-preview-container,
   .certificate-templates,
   .edit-certificate {
-    width: 100%;
     margin-left: 0;
   }
 
   .certificate-preview-container {
     margin-top: 20px;
+    width: 800px;
   }
 
   .certificate-templates {
     margin-top: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
     gap: 5px;
   }
 
   .edit-certificate {
     position: relative;
-    width: 80%;
+    max-width: 80%;
     top: 0;
     left: 0;
     right: 0;
     margin: 20px;
+
   }
 
   .generate-btn {
@@ -404,4 +405,9 @@ textarea.form-input {
     font-size: 15px;
     margin-top: 20px;
   }
+}
+
+.certificate-preview-container.generate-mode {
+  width: 800px !important;
+  max-width: 100%;
 }
