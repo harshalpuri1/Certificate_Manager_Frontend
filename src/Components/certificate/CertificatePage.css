@@ -24,6 +24,7 @@
 }
 
 .generate-btn {
+  position: absolute;
   width: 150px;
   height: 50px;
   border-radius: 10px;
@@ -34,7 +35,6 @@
   font-weight: 400;
   border: none;
   cursor: pointer;
-  position: absolute;
   top: 130px;
   right: 45px;
 }
@@ -46,6 +46,8 @@
 }
 
 .preview-section {
+  width: 800px;
+  height: 554px;
   background-color: #F5F5F5;
   border-radius: 10px;
   display: flex;
@@ -55,6 +57,7 @@
 
 .certificate-preview {
   width: 100%;
+  height: 525px;
   background-color: #F5F5F5;
   display: flex;
   align-items: center;
@@ -70,7 +73,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  width: 650px;
+  width: 800px;
   margin-left: 4rem;
   margin-top: 10px;
   background-color: #F5F5F5;
@@ -83,7 +86,7 @@
   align-items: center;
   right: 20px;
   left: 20px;
-  height: 175px;
+  height: 150px;
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
@@ -96,8 +99,9 @@
 
 .edit-certificate {
   position: absolute;
+  width: 33%;
   top: 200px;
-  left: 750px;
+  left: 900px;
   right: 45px;
   border-radius: 10px;
   background: #FFFFFF;
@@ -191,7 +195,8 @@ textarea.form-input {
 
 .certificate-preview-container {
   position: relative;
-  width: 650px;
+  width: 800px;
+  height: 600px;
   overflow: hidden;
 }
 
@@ -334,7 +339,7 @@ textarea.form-input {
 
   .edit-certificate {
     position: relative;
-    width: 100%;
+    width: 80%;
     top: 0;
     left: 0;
     right: 0;
@@ -343,7 +348,7 @@ textarea.form-input {
 
   .generate-btn {
     position: static;
-    width: 100%;
+    width: 80%;
     height: 45px;
     margin-top: 15px;
     font-size: 14px;
@@ -385,7 +390,7 @@ textarea.form-input {
 
   .edit-certificate {
     position: relative;
-    width: 100%;
+    width: 80%;
     top: 0;
     left: 0;
     right: 0;
