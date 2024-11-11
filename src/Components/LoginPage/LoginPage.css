@@ -37,8 +37,8 @@
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 500px;
+    width: 400px;
+    height: 550px;
     position: absolute;
     right: 10%;
 }
@@ -85,7 +85,7 @@
 }
 
 .formInput input {
-    width: 275px;
+    width: 93.8%;
     padding: 12px;
     border-radius: 4px;
     border: 1px solid #ccc;
@@ -211,6 +211,11 @@
         right: auto;
         left: auto;
         top: 170px;
+        width: 300px;
+        height: 500px;
+    }
+    .formInput input {
+        width: 275px;
     }
 }
 
@@ -224,4 +229,5 @@
         right: auto;
         top: 150px;
     }
+
 }

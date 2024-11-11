@@ -18,6 +18,8 @@ import template12 from "../assets/images/template12.png";
 import template13 from "../assets/images/template13.png";
 import template14 from "../assets/images/template14.png";
 import template15 from "../assets/images/template15.png";
+import samplelogo from "../assets/images/samplelogo.png";
+import signature from "../assets/images/signature.png";
 import Download from "../downloadPop/DownloadPop";
 import AddIcon from "../assets/images/add.png";
 import { toast } from "react-toastify";
@@ -50,13 +52,16 @@ const Certificate = () => {
   const [selectedTemplate, setSelectedTemplate] = useState(templateImages[0]);
   const [logoFileName, setLogoFileName] = useState("Upload File");
   const [signatureFileName, setSignatureFileName] = useState("Upload File");
-  const [topDescription, setTopDescription] = useState("");
-  const [recipientName, setRecipientName] = useState("");
-  const [description, setDescription] = useState("");
-  const [date, setDate] = useState("");
-  const [certifiedBy, setCertifiedBy] = useState("");
-  const [logoImage, setLogoImage] = useState(null);
-  const [signatureImage, setSignatureImage] = useState(null);
+  const [topDescription, setTopDescription] = useState("CERTIFICATE OF ACHIEVEMENT");
+  const [recipientName, setRecipientName] = useState("Theodore Charles");
+  const [description, setDescription] = useState("In recognition of their successful completion of Program. Your hard work, determination, and commitment to academic excellence have enabled you to achieve this significant milestone, and we are proud to recognize your achievement.");
+  const [date, setDate] = useState(() => {
+    const today = new Date();
+    return today.toISOString().split("T")[0]; // Returns date in "YYYY-MM-DD"
+  });
+    const [certifiedBy, setCertifiedBy] = useState("John Doe");
+  const [logoImage, setLogoImage] = useState(samplelogo);
+  const [signatureImage, setSignatureImage] = useState(signature);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState(null);
   const [names, setNames] = useState([]);

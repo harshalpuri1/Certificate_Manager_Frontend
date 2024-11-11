@@ -103,13 +103,22 @@ const verifyOtp = async (body) => {
   }
 };
 
+const addCertificateDetails = async () => {
+  try {
+    const response = await apiInstance.post(constants.apiName.certificate);
+    return response.data ? response.data : response;
+  } catch (error) {
+    return error.data ? error.data : error;
+  }
+};
 
 const api = {
   registerUser,
   loginUser,
   logoutUser,
   forgotPassword,
-  verifyOtp
+  verifyOtp,
+  addCertificateDetails
 };
 
 export default api;

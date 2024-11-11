@@ -156,9 +156,9 @@ function ForgotPassword() {
         )}
 
         <div className="form-footer">
-          <p onClick={() => nav(strings.signin)}>
+          <span onClick={() => nav(strings.signin)}>
             {strings["back-to-login"]} <span>{strings.Signin}</span>
-          </p>
+          </span>
         </div>
       </div>
     </div>

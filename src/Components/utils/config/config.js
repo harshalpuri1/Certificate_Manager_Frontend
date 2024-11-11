@@ -23,7 +23,8 @@ const constants = {
     login: "/login/user",
     logout: "/logout/user",
     forgotpsw:"/forgot/send/otp",
-    verifyotp:"/forgot/password"
+    verifyotp:"/forgot/password",
+    certificate:"/certificate/user"
   },
  localStorage: {
   authToken: "Authorization",
