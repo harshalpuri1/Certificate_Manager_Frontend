@@ -180,18 +180,24 @@ textarea.form-input {
   object-fit: cover;
 }
 
-.remove-name-button {
-  display: inline-flex;
-  margin-left: 10px;
-  height: fit-content;
+.remove-name-img {
+  height: 20PX;
   width: 20px;
+  background: none;
+  border: none;
+  padding: 0; 
+  cursor: pointer; 
 }
-
-.name-chip>img {
-
+.remove-name-button {
+  background: transparent; 
+  border: none;
+  display: flex;
   align-items: center;
 }
-
+.name-chip{
+  display: flex;
+  align-items: center;
+}
 .certificate-preview-container {
   position: relative;
   width: 100%;
@@ -265,7 +271,6 @@ textarea.form-input {
   top: 70px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
   height: 100px;
   object-fit: cover;
   /* border-radius: 50%; */

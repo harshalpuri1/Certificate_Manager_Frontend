@@ -405,9 +405,9 @@ const Certificate = () => {
                 {names.map((name, index) => (
                   <div key={index} className="name-chip">
                     {name}
-                    <button onClick={() => removeName(index)}>
+                    <button className="remove-name-button" onClick={() => removeName(index)}>
                       <img
-                        className="remove-name-button"
+                        className="remove-name-img"
                         alt="cancel"
                         src={cancel}
                       />
