@@ -1,4 +1,4 @@
-const baseURL= "https://certificate-manager-backend.onrender.com/api/v1";
+const baseURL= "http://52.41.36.82/api/v1";
 const services =  {
 baseURL
 }
