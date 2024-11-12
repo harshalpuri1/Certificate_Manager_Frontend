@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import constants from "../utils/config/config";
 
 function LoginPage() {
-  const [username, setUsername] = useState("");
+  const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
@@ -17,8 +17,8 @@ function LoginPage() {
   const formValidation = () => {
     const newErrors = {};
 
-    if (!username) {
-      newErrors.username = strings.validUsername;
+    if (!email) {
+      newErrors.email = strings.validemail;
     }
 
     if (!password) {
@@ -37,7 +37,7 @@ function LoginPage() {
       const toastId = toast.loading(strings.loginto);
       try {
         const body = {
-          email: username,
+          email: email,
           password: password,
         };
         const response = await api.loginUser(body);
@@ -45,7 +45,7 @@ function LoginPage() {
         console.log(response);
 
         if (response.status && response.body) {
-          localStorage.setItem(constants.localStorage.userEmail, username);
+          localStorage.setItem(constants.localStorage.userEmail, email);
           localStorage.setItem(
             constants.localStorage.token,
             response.body.token
@@ -92,17 +92,17 @@ function LoginPage() {
           <p>{strings.disc}</p>
           <form onSubmit={loginUser}>
             <div className="formInput">
-              <label htmlFor={strings.username1}>{strings.username}</label>
+              <label htmlFor={strings.email1}>{strings.email}</label>
               <input
                 type="text"
-                id={strings.username1}
-                name={strings.username1}
-                placeholder={strings.enterUsername}
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                id={strings.email1}
+                name={strings.email1}
+                placeholder={strings.enteremail}
+                value={email}
+                onChange={(e) => setemail(e.target.value)}
               />
-              {errors.username && (
-                <div className="error-message">{errors.username}</div>
+              {errors.email && (
+                <div className="error-message">{errors.email}</div>
               )}
             </div>
             <div className="formInput">
@@ -126,7 +126,7 @@ function LoginPage() {
             </div>
             <div className="formLinks">
               <label>
-                <input type="checkbox" name={strings.username1} />
+                <input type="checkbox" name={strings.email1} />
                 {strings.remember}
               </label>
               <span onClick={() => nav(strings.forgotpass)}>

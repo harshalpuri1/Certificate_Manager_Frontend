@@ -12,9 +12,7 @@ export const AppRoutes = () => {
       nav(constants.navigationLink.certificate);
     } else if (
       !token &&
-      (location.pathname ===
-        constants.navigationLink.certificate ||
-          constants.navigationLink.settings)
+      location.pathname === constants.navigationLink.certificate
     ) {
       nav(constants.navigationLink.loginLink);
     }
