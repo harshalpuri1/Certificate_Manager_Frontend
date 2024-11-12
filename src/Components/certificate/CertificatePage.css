@@ -24,8 +24,7 @@
 }
 
 .generate-btn {
-  position: absolute;
-  width: 150px;
+  width: 100%;
   height: 50px;
   border-radius: 10px;
   background-color: #132A52;
@@ -40,14 +39,13 @@
 }
 
 .certificate-display {
-  margin-top: 100px;
-  margin-left: 4rem;
+  margin-left: 1rem;
+  height: 554px;
   margin-bottom: 50px;
 }
 
 .preview-section {
-  width: 800px;
-  height: 554px;
+
   background-color: #F5F5F5;
   border-radius: 10px;
   display: flex;
@@ -74,7 +72,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   width: 800px;
-  margin-left: 4rem;
+  margin-left: 1rem;
   margin-top: 10px;
   background-color: #F5F5F5;
   border-radius: 10px;
@@ -99,11 +97,9 @@
 
 .edit-certificate {
   position: absolute;
-  width: 100%;
-  max-width: 500px;
-  top: 200px;
-  left: 900px;
-  right: 45px;
+  width: 32%;
+  top: 120px;
+  left: 850px;
   border-radius: 10px;
   background: #FFFFFF;
   border: 1px solid #647BA2;
@@ -112,37 +108,35 @@
 
 h2 {
   font-family: 'Inter', sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   color: #132A52;
-  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 .form-group {
   margin-bottom: 15px;
 }
 .label-box {
-  background: #8A9CBD;
   border-radius: 10px;
-  padding: 25px 15px;
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-weight:300;
   color: #132A52;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-left: 3px;
+  margin-top: 20px;
+  margin-bottom: 8px;
   box-sizing: border-box; /* Ensures padding is included in the box model */
 }
 
 .form-input {
   width: 100%; /* Full width to match label box */
-  height: 70px;
-  padding: 12px;
+  padding: 15px;
   border-radius: 10px;
   border: 1px solid #8A9CBD;
   padding-left: 15px;
   font-family: 'Inter', sans-serif;
   font-size: 15px;
   background: #FFFFFF;
-  color: #132A52;
+  color: #A4A4A4;
   box-sizing: border-box; /* Include padding and border in width */
   align-items: center;
 }
@@ -163,20 +157,20 @@ textarea.form-input {
 .upload-icon {
   position: absolute;
   right: 5px;
-  bottom: 3px;
+  bottom: 4px;
   border-radius: 10px;
-  width: 65px;
-  height: 65px;
+  width: 42px;
+  height: 42px;
   object-fit: cover;
 }
 
 .add-name-icon {
   position: absolute;
   right: 5px;
-  bottom: 3px;
+  bottom: 4px;
   border-radius: 10px;
-  width: 60px;
-  height: 60px;
+  width: 42px;
+  height: 42px;
   object-fit: cover;
 }
 
@@ -200,9 +194,8 @@ textarea.form-input {
 }
 .certificate-preview-container {
   position: relative;
-  width: 100%;
+  width: auto;
   max-width: 800px;
-  height: auto;
   padding: 20px;
   overflow: hidden;
   box-sizing: border-box;
@@ -351,13 +344,6 @@ textarea.form-input {
     margin: 20px;
   }
 
-  .generate-btn {
-    position: static;
-    width: 80%;
-    height: 45px;
-    margin-top: 15px;
-    font-size: 14px;
-  }
 }
 
 
@@ -395,7 +381,7 @@ textarea.form-input {
 
   .edit-certificate {
     position: relative;
-    max-width: 80%;
+    width: 80%;
     top: 0;
     left: 0;
     right: 0;
@@ -403,16 +389,9 @@ textarea.form-input {
 
   }
 
-  .generate-btn {
-    position: static;
-    width: 80%;
-    height: 45px;
-    font-size: 15px;
-    margin-top: 20px;
-  }
 }
 
 .certificate-preview-container.generate-mode {
   width: 800px !important;
-  max-width: 100%;
+  width: 100%;
 }

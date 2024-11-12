@@ -52,9 +52,9 @@ const Certificate = () => {
   const [selectedTemplate, setSelectedTemplate] = useState(templateImages[0]);
   const [logoFileName, setLogoFileName] = useState("Upload File");
   const [signatureFileName, setSignatureFileName] = useState("Upload File");
-  const [topDescription, setTopDescription] = useState("CERTIFICATE OF ACHIEVEMENT");
-  const [recipientName, setRecipientName] = useState("Theodore Charles");
-  const [description, setDescription] = useState("In recognition of their successful completion of Program. Your hard work, determination, and commitment to academic excellence have enabled you to achieve this significant milestone, and we are proud to recognize your achievement.");
+  const [topDescription, setTopDescription] = useState();
+  const [recipientName, setRecipientName] = useState();
+  const [description, setDescription] = useState();
   const [date, setDate] = useState(() => {
     const today = new Date();
     return today.toISOString().split("T")[0]; // Returns date in "YYYY-MM-DD"
@@ -301,11 +301,11 @@ const Certificate = () => {
               />
               <div className="certificate-texts">
                 <div className="info-container">
-                  <div className="top-description">{topDescription}</div>
+                  <div className="top-description">{topDescription ? topDescription: strings.topDescription }</div>
                   <div className="recipient-name">
                     {recipientName ? recipientName : "Name of recipient"}
                   </div>
-                  <div className="description">{description}</div>
+                  <div className="description">{description ? description: strings.description }</div>
                 </div>
                 <div className="date-certified-container">
                   <div className="date">{date}</div>
@@ -471,9 +471,7 @@ const Certificate = () => {
                 </label>
               </div>
             </div>
-          </form>
-        </div>
-        <button
+            <button
           onClick={() => {
             addName(recipientName);
             handlePress();
@@ -482,6 +480,8 @@ const Certificate = () => {
         >
           {strings.GenerateButton}
         </button>
+          </form>
+        </div>
 
         <Download
           isOpen={modalIsOpen}

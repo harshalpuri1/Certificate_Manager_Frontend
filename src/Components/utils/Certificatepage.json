@@ -13,5 +13,7 @@
     "noRecipientNames":"No recipient name provided",
     "genCertificate":"Generating certificates...",
     "certificateGenSucc": "Certificates generated successfully.",
-    "errGenCertificate": "Error generating certificates"
+    "errGenCertificate": "Error generating certificates",
+    "description": "In recognition of their successful completion of Program. Your hard work, determination, and commitment to academic excellence have enabled you to achieve this significant milestone, and we are proud to recognize your achievement.",
+    "topDescription": "CERTIFICATE OF ACHIEVEMENT"
 }
