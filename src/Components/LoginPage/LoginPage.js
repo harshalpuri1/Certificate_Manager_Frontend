@@ -57,19 +57,12 @@ function LoginPage() {
 
         console.log(response);
 
-        if (response.status && response.body) {
+        if (response.status && response.body && remember) {
           localStorage.setItem(constants.localStorage.userEmail, username);
           localStorage.setItem(
             constants.localStorage.token,
             response.body.token
           );
-          if (remember) {
-            localStorage.setItem("username", username);
-            localStorage.setItem("password", password);
-          } else {
-            localStorage.removeItem("username");
-            localStorage.removeItem("password");
-          }
 
           toast.update(toastId, {
             render: response.body.message,

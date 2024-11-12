@@ -14,6 +14,8 @@ import { Navbar } from "../navbar/Navbar";
 import { toast } from "react-toastify";
 
 const Settings = () => {
+  const email = localStorage.getItem(strings.email);
+
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text).then(
       () => {
@@ -57,7 +59,7 @@ const Settings = () => {
                     <div className="icon-background">
                       <img src={mail} alt="Email Icon" className="info-icon" />
                     </div>
-                    <span className="info-text" style={{ color: "#0D47A1", fontWeight: "500" }}>{strings.email}</span>
+                    <span className="info-text" style={{ color: "#0D47A1", fontWeight: "500" }}>{email}</span>
                   </div>
                   <div className="info-item">
                     <div className="icon-background">
