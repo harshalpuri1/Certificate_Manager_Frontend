@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./LoginPage.css";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -12,20 +12,7 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
-  const [remember, setRemember] = useState(false);
   const nav = useNavigate();
-
-  useEffect(() => {
-    // Retrieve saved credentials if available
-    const savedUsername = localStorage.getItem("username");
-    const savedPassword = localStorage.getItem("password");
-
-    if (savedUsername && savedPassword) {
-      setUsername(savedUsername);
-      setPassword(savedPassword);
-      setRemember(true);
-    }
-  }, []);
 
   const formValidation = () => {
     const newErrors = {};
@@ -57,13 +44,12 @@ function LoginPage() {
 
         console.log(response);
 
-        if (response.status && response.body && remember) {
+        if (response.status && response.body) {
           localStorage.setItem(constants.localStorage.userEmail, username);
           localStorage.setItem(
             constants.localStorage.token,
             response.body.token
           );
-
           toast.update(toastId, {
             render: response.body.message,
             type: "success",
@@ -104,7 +90,7 @@ function LoginPage() {
           <h3>{strings.welcome}</h3>
           <h2>{strings.intro}</h2>
           <p>{strings.disc}</p>
-          <form onSubmit={loginUser} autoComplete="on">
+          <form onSubmit={loginUser}>
             <div className="formInput">
               <label htmlFor={strings.username1}>{strings.username}</label>
               <input
@@ -114,7 +100,6 @@ function LoginPage() {
                 placeholder={strings.enterUsername}
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                autoComplete="username"
               />
               {errors.username && (
                 <div className="error-message">{errors.username}</div>
@@ -130,7 +115,6 @@ function LoginPage() {
                   placeholder={strings.enterPassword}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  autoComplete="password"
                 />
                 <span onClick={PasswordVisibility}>
                   {showPassword ? <FaEye /> : <FaEyeSlash />}
@@ -142,12 +126,7 @@ function LoginPage() {
             </div>
             <div className="formLinks">
               <label>
-              <input
-                  type="checkbox"
-                  name="remember"
-                  checked={remember}
-                  onChange={(e) => setRemember(e.target.checked)}
-                />
+                <input type="checkbox" name={strings.username1} />
                 {strings.remember}
               </label>
               <span onClick={() => nav(strings.forgotpass)}>
