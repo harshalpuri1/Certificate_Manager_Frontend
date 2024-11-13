@@ -119,19 +119,22 @@ h2 {
 .form-group {
   margin-bottom: 15px;
 }
+
 .label-box {
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
-  font-weight:300;
+  font-weight: 300;
   color: #132A52;
   margin-left: 3px;
   margin-top: 20px;
   margin-bottom: 8px;
-  box-sizing: border-box; /* Ensures padding is included in the box model */
+  box-sizing: border-box;
+  /* Ensures padding is included in the box model */
 }
 
 .form-input {
-  width: 100%; /* Full width to match label box */
+  width: 100%;
+  /* Full width to match label box */
   padding: 15px;
   border-radius: 10px;
   border: 1px solid #8A9CBD;
@@ -140,7 +143,8 @@ h2 {
   font-size: 15px;
   background: #FFFFFF;
   color: #A4A4A4;
-  box-sizing: border-box; /* Include padding and border in width */
+  box-sizing: border-box;
+  /* Include padding and border in width */
   align-items: center;
 }
 
@@ -182,19 +186,22 @@ textarea.form-input {
   width: 20px;
   background: none;
   border: none;
-  padding: 0; 
-  cursor: pointer; 
+  padding: 0;
+  cursor: pointer;
 }
+
 .remove-name-button {
-  background: transparent; 
+  background: transparent;
   border: none;
   display: flex;
   align-items: center;
 }
-.name-chip{
+
+.name-chip {
   display: flex;
   align-items: center;
 }
+
 .certificate-preview-container {
   position: relative;
   width: 100%;
@@ -230,7 +237,6 @@ textarea.form-input {
   font-family: serif;
   font-size: 2vw;
   justify-content: space-around;
-  padding-bottom: 5px;
   width: 90%;
 
 }
@@ -253,11 +259,12 @@ textarea.form-input {
 }
 
 
-  .date,.certified-by{
-    font-family: 'Arial', sans-serif;
-    font-size: 1vw;
-  }
-  
+.date,
+.certified-by {
+  font-family: 'Arial', sans-serif;
+  font-size: 1vw;
+}
+
 .certificate-logo {
   position: sticky;
   left: 50%;
@@ -318,7 +325,8 @@ textarea.form-input {
     height: auto;
     width: 100%;
   }
-  .certificate-preview-container{
+
+  .certificate-preview-container {
     margin-left: 0;
     margin-top: 20px;
     padding: 0;
@@ -355,22 +363,29 @@ textarea.form-input {
     overflow: hidden;
   }
 
-  .top-description{
+  .top-description {
     font-size: 4.5vw;
   }
-  .recipient-name{
+
+  .recipient-name {
     font-size: 4vw;
   }
-  .description, .date,.certified-by{
+
+  .description,
+  .date,
+  .certified-by {
     font-size: 2vw;
   }
-  .date-certified-container{
-    margin: 0 20%;
+
+  .description {
+    width: 80%;
   }
-  .certificate-signature{
+  
+  .certificate-signature {
     width: 10vw;
   }
-  .recipient-name{
+
+  .recipient-name {
     margin-top: 1vh;
     margin-bottom: 1vh;
   }
@@ -399,31 +414,45 @@ textarea.form-input {
     background-color: transparent;
     overflow: hidden;
   }
-  .top-description{
+
+  .top-description {
     font-size: 4.5vw;
   }
-  .recipient-name{
+
+  .recipient-name {
     font-size: 4vw;
   }
-  .description, .date,.certified-by{
+
+  .description,
+  .date,
+  .certified-by {
     font-size: 2vw;
   }
-  .date-certified-container{
+
+  .description {
+    width: 80%;
+  }
+
+  .date-certified-container {
     margin: 0 20%;
   }
-  .certificate-signature{
+
+  .certificate-signature {
     width: 10vw;
   }
-  .recipient-name{
+
+  .recipient-name {
     margin-top: 1vh;
     margin-bottom: 1vh;
   }
+
   .certificate-display {
     margin: 10px;
     margin-top: 0;
     width: 100%;
     height: auto;
   }
+
   .certificate-preview-container,
   .certificate-templates,
   .edit-certificate {
@@ -463,23 +492,34 @@ textarea.form-input {
 .custom-dropdown {
   position: relative;
   display: inline-block;
-  width: 100%; /* Full width for consistency */
+  width: 100%;
+  /* Full width for consistency */
   height: 50px;
 }
 
 .dropdown-btn {
-  width: 100%; /* Full width for consistency */
-  height: 50px; /* Match the height of the generate button */
-  border-radius: 10px; /* Match the border-radius of the generate button */
-  background-color: #EBF2FF; /* Use the same background color */
+  width: 100%;
+  /* Full width for consistency */
+  height: 50px;
+  /* Match the height of the generate button */
+  border-radius: 10px;
+  /* Match the border-radius of the generate button */
+  background-color: #EBF2FF;
+  /* Use the same background color */
   color: #132A52;
-  font-family: 'Inter', sans-serif; /* Match font style */
-  font-size: 16px; /* Font size consistent with the generate button */
-  font-weight: 300; /* Regular font weight */
+  font-family: 'Inter', sans-serif;
+  /* Match font style */
+  font-size: 16px;
+  /* Font size consistent with the generate button */
+  font-weight: 300;
+  /* Regular font weight */
   border: 1px solid #8A9CBD;
-  cursor: pointer; /* Pointer cursor on hover */
-  text-align: left; /* Text alignment for the button */
-  padding-left: 16px; /* Add some padding to the left for alignment */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  text-align: left;
+  /* Text alignment for the button */
+  padding-left: 16px;
+  /* Add some padding to the left for alignment */
 }
 
 /* Dropdown Options */
@@ -489,10 +529,13 @@ textarea.form-input {
   background-color: white;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  width: 100%; /* Full width to match the button */
+  width: 100%;
+  /* Full width to match the button */
   max-height: 200px;
-  overflow-y: auto; /* Add scrollbar */
-  border-radius: 10px; /* Match the button border-radius */
+  overflow-y: auto;
+  /* Add scrollbar */
+  border-radius: 10px;
+  /* Match the button border-radius */
 }
 
 .custom-dropdown:hover .dropdown-options {
@@ -500,7 +543,8 @@ textarea.form-input {
 }
 
 .dropdown-option {
-  padding: 16px; /* Match padding for consistency */
+  padding: 16px;
+  /* Match padding for consistency */
   cursor: pointer;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
@@ -508,6 +552,6 @@ textarea.form-input {
 }
 
 .dropdown-option:hover {
-  background-color: #f1f1f1; /* Light background on hover for options */
+  background-color: #f1f1f1;
+  /* Light background on hover for options */
 }
-
