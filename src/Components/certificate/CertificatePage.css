@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Ingrid+Darling&family=Imperial+Script&family=Kapakana&family=Kings&family=Kolker+Brush&family=Kranky&family=Kristi&family=La+Belle+Aurore&family=Lavishly+Yours&family=League+Script&display=swap');
+
 
 .certificate-page {
   font-family: 'Poppins', sans-serif;
@@ -457,3 +459,59 @@ textarea.form-input {
   width: 800px !important;
   width: 100%;
 }
+
+
+/* Custom Dropdown Button */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  width: 100%; /* Full width for consistency */
+  height: 50px; /* Match the height of the generate button */
+  border-radius: 10px; /* Match the border-radius of the generate button */
+  background-color: #132A52; /* Use the same background color */
+  color: #FFFFFF; /* White text color */
+  font-family: 'Inter', sans-serif; /* Match font style */
+  font-size: 16px; /* Font size consistent with the generate button */
+  font-weight: 400; /* Regular font weight */
+  border: none; /* Remove the border */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: left; /* Text alignment for the button */
+  padding-left: 16px; /* Add some padding to the left for alignment */
+}
+
+.dropdown-btn:hover {
+  background-color: #1D417D; /* Darker shade on hover for button */
+}
+
+/* Dropdown Options */
+.dropdown-options {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 100%; /* Full width to match the button */
+  max-height: 150px;
+  overflow-y: auto; /* Add scrollbar */
+  border-radius: 10px; /* Match the button border-radius */
+}
+
+.custom-dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.dropdown-option {
+  padding: 16px; /* Match padding for consistency */
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.dropdown-option:hover {
+  background-color: #f1f1f1; /* Light background on hover for options */
+}
+

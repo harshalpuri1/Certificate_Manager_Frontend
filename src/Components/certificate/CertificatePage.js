@@ -59,14 +59,33 @@ const Certificate = () => {
     const today = new Date();
     return today.toISOString().split("T")[0];
   });
-    const [certifiedBy, setCertifiedBy] = useState("John Doe");
+  const [certifiedBy, setCertifiedBy] = useState("John Doe");
   const [logoImage, setLogoImage] = useState(samplelogo);
   const [signatureImage, setSignatureImage] = useState(signature);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState(null);
   const [names, setNames] = useState([]);
   const [namesParams] = useSearchParams();
+  const [font, setFont] = useState("Island Moments");
 
+  const handleFontChange = (fontValue) => {
+    setFont(fontValue);
+    document.getElementById("recipient-name").style.fontFamily = fontValue;
+  };
+
+  const fonts = [
+    "Island Moments",
+    "Ingrid Darling",
+    "Imperial Script",
+    "Kapakana",
+    "Kings",
+    "Kolker Brush",
+    "Kranky",
+    "Kristi",
+    "La Belle Aurore",
+    "Lavishly Yours",
+    "League Script",
+  ];
 
   useEffect(() => {
     const extractNamesFromURL = () => {
@@ -280,11 +299,15 @@ const Certificate = () => {
               />
               <div className="certificate-texts">
                 <div className="info-container">
-                  <div className="top-description">{topDescription ? topDescription: strings.topDescription }</div>
-                  <div className="recipient-name">
+                  <div className="top-description">
+                    {topDescription ? topDescription : strings.topDescription}
+                  </div>
+                  <div className="recipient-name" style={{ fontFamily: font }}>
                     {recipientName ? recipientName : "Name of recipient"}
                   </div>
-                  <div className="description">{description ? description: strings.description }</div>
+                  <div className="description">
+                    {description ? description : strings.description}
+                  </div>
                 </div>
                 <div className="date-certified-container">
                   <div className="date">{date}</div>
@@ -384,7 +407,10 @@ const Certificate = () => {
                 {names.map((name, index) => (
                   <div key={index} className="name-chip">
                     {name}
-                    <button className="remove-name-button" onClick={() => removeName(index)}>
+                    <button
+                      className="remove-name-button"
+                      onClick={() => removeName(index)}
+                    >
                       <img
                         className="remove-name-img"
                         alt="cancel"
@@ -395,6 +421,50 @@ const Certificate = () => {
                 ))}
               </div>
             )}
+            {/* Font selection */}
+            {/* <div className="form-group">
+              <div className="label-box">Select Font</div>
+              <select
+                value={font}
+                onChange={handleFontChange}
+                className="form-input"
+                id="font-select"
+              >
+                <option value="Poppins">Poppins</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Arial">Arial</option>
+                <option value="Italianno">Italianno</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Island Moments">Island Moments</option>
+                <option value="Ingrid Darling">Ingrid Darling</option>
+                <option value="Imperial Script">Imperial Script</option>
+                <option value="Kapakana">Kapakana</option>
+                <option value="Kings">Kings</option>
+                <option value="Kolker Brush">Kolker Brush</option>
+                <option value="Kranky">Kranky</option>
+                <option value="Kristi">Kristi</option>
+                <option value="La Belle Aurore">La Belle Aurore</option>
+                <option value="Lavishly Yours">Lavishly Yours</option>
+                <option value="League Script">League Script</option>
+              </select>
+            </div> */}
+            <div className="app">
+              <div className="custom-dropdown">
+                <button className="dropdown-btn">{font}</button>
+                <div className="dropdown-options">
+                  {fonts.map((fontOption, index) => (
+                    <div
+                      key={index}
+                      className="dropdown-option"
+                      onClick={() => handleFontChange(fontOption)}
+                    >
+                      {fontOption}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <div className="form-group">
               <div className="label-box">{strings.descriptionLabel}</div>
               <textarea
@@ -451,14 +521,14 @@ const Certificate = () => {
               </div>
             </div>
             <button
-          onClick={() => {
-            addName(recipientName);
-            handlePress();
-          }}
-          className="generate-btn"
-        >
-          {strings.GenerateButton}
-        </button>
+              onClick={() => {
+                addName(recipientName);
+                handlePress();
+              }}
+              className="generate-btn"
+            >
+              {strings.GenerateButton}
+            </button>
           </form>
         </div>
 
