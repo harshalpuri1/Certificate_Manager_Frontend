@@ -8,11 +8,15 @@ export const AppRoutes = () => {
 
   useEffect(() => {
     const token = localStorage.getItem(constants.localStorage.token);
-    if (token && location.pathname === constants.navigationLink.loginLink) {
+    const loginpg = location.pathname === constants.navigationLink.loginLink;
+    const signup = location.pathname === constants.navigationLink.signup;
+    const forgotpass = location.pathname === constants.navigationLink.forgotpass;
+    const certificate = location.pathname === constants.navigationLink.certificate;
+    const settings = location.pathname === constants.navigationLink.settings;
+    if (token && (loginpg || signup || forgotpass)) {
       nav(constants.navigationLink.certificate);
     } else if (
-      !token &&
-      location.pathname === constants.navigationLink.certificate
+      !token && (certificate || settings)
     ) {
       nav(constants.navigationLink.loginLink);
     }

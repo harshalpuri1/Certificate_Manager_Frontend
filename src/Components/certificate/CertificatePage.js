@@ -71,7 +71,7 @@ const Certificate = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 769 && !hasShownAlert) {
-        alert("Rotate your phone for a better experience");
+        // alert("Rotate your phone for a better experience");
         setHasShownAlert(true);
       } else if (window.innerWidth >= 769 && hasShownAlert) {
         setHasShownAlert(false);

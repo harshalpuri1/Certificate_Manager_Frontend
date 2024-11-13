@@ -40,7 +40,8 @@
 
 .certificate-display {
   margin-left: 1rem;
-  height: 554px;
+  height: auto;
+  width: 53vw;
   margin-bottom: 50px;
 }
 
@@ -55,7 +56,7 @@
 
 .certificate-preview {
   width: 100%;
-  height: 525px;
+  height: auto;
   background-color: #F5F5F5;
   display: flex;
   align-items: center;
@@ -69,13 +70,15 @@
 
 .certificate-templates {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 2fr);
   gap: 10px;
-  width: 800px;
+  max-width: 50vw;
+  height: fit-content;
   margin-left: 1rem;
   margin-top: 10px;
   background-color: #F5F5F5;
   border-radius: 10px;
+  padding: 2vh;
 }
 
 .template-box {
@@ -84,14 +87,14 @@
   align-items: center;
   right: 20px;
   left: 20px;
-  height: 150px;
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
 }
 
 .template-box img {
-  width: 185px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -99,7 +102,7 @@
   position: absolute;
   width: 32%;
   top: 120px;
-  left: 850px;
+  left: 55vw;
   border-radius: 10px;
   background: #FFFFFF;
   border: 1px solid #647BA2;
@@ -194,8 +197,8 @@ textarea.form-input {
 }
 .certificate-preview-container {
   position: relative;
-  width: auto;
-  max-width: 800px;
+  width: 100%;
+  height: auto;
   padding: 20px;
   overflow: hidden;
   box-sizing: border-box;
@@ -214,7 +217,7 @@ textarea.form-input {
 .top-description {
   text-align: center;
   font-family: 'Georgia', serif;
-  font-size: 35px;
+  font-size: 2vw;
   justify-content: space-around;
   white-space: normal;
   padding: 0 10px;
@@ -225,7 +228,7 @@ textarea.form-input {
   margin-bottom: 10px;
   text-align: center;
   font-family: serif;
-  font-size: 34px;
+  font-size: 2vw;
   justify-content: space-around;
   padding-bottom: 5px;
   width: 90%;
@@ -236,8 +239,8 @@ textarea.form-input {
   margin: 0 100px;
   text-align: center;
   font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  width: 80%;
+  font-size: 1vw;
+  width: 75%;
 }
 
 .date-certified-container {
@@ -245,26 +248,23 @@ textarea.form-input {
   justify-content: space-between;
   height: 74%;
   align-items: flex-end;
-  margin: 0 150px;
+  margin: 0 20%;
   padding: 6px;
 }
 
-.date {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-}
 
-.certified-by {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-}
-
+  .date,.certified-by{
+    font-family: 'Arial', sans-serif;
+    font-size: 1vw;
+  }
+  
 .certificate-logo {
-  position: absolute;
-  top: 70px;
+  position: sticky;
   left: 50%;
+  bottom: 72%;
+  top: auto;
   transform: translateX(-50%);
-  height: 100px;
+  height: 6vw;
   object-fit: cover;
   /* border-radius: 50%; */
   background-color: transparent;
@@ -279,7 +279,7 @@ textarea.form-input {
 }
 
 .certificate-signature {
-  width: 90px;
+  width: 12vh;
 }
 
 .info-container {
@@ -315,35 +315,65 @@ textarea.form-input {
   .certificate-display {
     margin: 10px;
     margin-top: 0;
-  }
-  .template-box img{
+    height: auto;
     width: 100%;
   }
   .certificate-preview-container{
-    width: 100%;
     margin-left: 0;
     margin-top: 20px;
+    padding: 0;
   }
 
   .certificate-templates {
-    width: 100%;
+    max-width: 95%;
     margin-top: 10px;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 5px 10px;
     box-sizing: border-box;
     margin-left: 0;
   }
 
   .edit-certificate {
     position: relative;
-    max-width: 90%;
-    width: 500px;
+    width: 90%;
     top: 0;
     left: 0;
     right: 0;
     margin: 20px;
   }
 
+  .certificate-logo {
+    position: sticky;
+    left: 50%;
+    bottom: 72%;
+    top: auto;
+    transform: translateX(-50%);
+    width: auto;
+    height: 11vw;
+    object-fit: cover;
+    background-color: transparent;
+    overflow: hidden;
+  }
+
+  .top-description{
+    font-size: 4.5vw;
+  }
+  .recipient-name{
+    font-size: 4vw;
+  }
+  .description, .date,.certified-by{
+    font-size: 2vw;
+  }
+  .date-certified-container{
+    margin: 0 20%;
+  }
+  .certificate-signature{
+    width: 10vw;
+  }
+  .recipient-name{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
 }
 
 
@@ -357,11 +387,43 @@ textarea.form-input {
     padding: 10px;
   }
 
+  .certificate-logo {
+    position: sticky;
+    left: 50%;
+    bottom: 72%;
+    top: auto;
+    transform: translateX(-50%);
+    width: auto;
+    height: 11vw;
+    object-fit: cover;
+    background-color: transparent;
+    overflow: hidden;
+  }
+  .top-description{
+    font-size: 4.5vw;
+  }
+  .recipient-name{
+    font-size: 4vw;
+  }
+  .description, .date,.certified-by{
+    font-size: 2vw;
+  }
+  .date-certified-container{
+    margin: 0 20%;
+  }
+  .certificate-signature{
+    width: 10vw;
+  }
+  .recipient-name{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
   .certificate-display {
     margin: 10px;
     margin-top: 0;
+    width: 100%;
+    height: auto;
   }
-
   .certificate-preview-container,
   .certificate-templates,
   .edit-certificate {
@@ -370,18 +432,18 @@ textarea.form-input {
 
   .certificate-preview-container {
     margin-top: 20px;
-    width: 800px;
   }
 
   .certificate-templates {
     margin-top: 10px;
     grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
-    gap: 5px;
+    gap: 5px 10px;
+    max-width: 95%;
   }
 
   .edit-certificate {
     position: relative;
-    width: 80%;
+    width: 90%;
     top: 0;
     left: 0;
     right: 0;

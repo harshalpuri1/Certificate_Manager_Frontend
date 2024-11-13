@@ -8,6 +8,8 @@ const constants = {
     serverDown: "/server-down",
     serverError: "/server-error",
     loginLink: "/",
+    signup:"/signup",
+    forgotpass:"/forgot",
     certificate:"/Certificate",
     settings:"/settings"
   },
