@@ -34,8 +34,6 @@
   font-weight: 400;
   border: none;
   cursor: pointer;
-  top: 130px;
-  right: 45px;
 }
 
 .certificate-display {
@@ -100,7 +98,7 @@
 
 .edit-certificate {
   position: absolute;
-  width: 32%;
+  width: 39%;
   top: 120px;
   left: 55vw;
   border-radius: 10px;
@@ -453,7 +451,3 @@ textarea.form-input {
 
 }
 
-.certificate-preview-container.generate-mode {
-  width: 800px !important;
-  width: 100%;
-}
