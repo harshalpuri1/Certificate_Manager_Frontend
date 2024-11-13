@@ -520,8 +520,9 @@ const Certificate = () => {
               </div>
             </div>
             <button
-              onClick={() => {
+              onClick={(e) => {
                 addName(recipientName);
+                e.preventDefault();
                 handlePress();
               }}
               className="generate-btn"
