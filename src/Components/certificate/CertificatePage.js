@@ -66,7 +66,7 @@ const Certificate = () => {
   const [image, setImage] = useState(null);
   const [names, setNames] = useState([]);
   const [namesParams] = useSearchParams();
-  const [font, setFont] = useState("Island Moments");
+  const [font, setFont] = useState("Select Font");
 
   const handleFontChange = (fontValue) => {
     setFont(fontValue);
@@ -448,20 +448,19 @@ const Certificate = () => {
                 <option value="League Script">League Script</option>
               </select>
             </div> */}
-            <div className="app">
-              <div className="custom-dropdown">
-                <button className="dropdown-btn">{font}</button>
-                <div className="dropdown-options">
-                  {fonts.map((fontOption, index) => (
-                    <div
-                      key={index}
-                      className="dropdown-option"
-                      onClick={() => handleFontChange(fontOption)}
-                    >
-                      {fontOption}
-                    </div>
-                  ))}
-                </div>
+
+            <div className="custom-dropdown">
+              <button className="dropdown-btn">{font}</button>
+              <div className="dropdown-options">
+                {fonts.map((fontOption, index) => (
+                  <div
+                    key={index}
+                    className="dropdown-option"
+                    onClick={() => handleFontChange(fontOption)}
+                  >
+                    {fontOption}
+                  </div>
+                ))}
               </div>
             </div>
 
