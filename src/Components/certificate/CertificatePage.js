@@ -351,7 +351,7 @@ const Certificate = () => {
 
         <div className="edit-certificate">
           <h2>{strings.editCertificateTitle}</h2>
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             <div className="form-group logo-group">
               <div className="label-box">{strings.LogoLabel}</div>
               <div className="upload-box">
@@ -421,33 +421,6 @@ const Certificate = () => {
                 ))}
               </div>
             )}
-            {/* Font selection */}
-            {/* <div className="form-group">
-              <div className="label-box">Select Font</div>
-              <select
-                value={font}
-                onChange={handleFontChange}
-                className="form-input"
-                id="font-select"
-              >
-                <option value="Poppins">Poppins</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Arial">Arial</option>
-                <option value="Italianno">Italianno</option>
-                <option value="Courier New">Courier New</option>
-                <option value="Island Moments">Island Moments</option>
-                <option value="Ingrid Darling">Ingrid Darling</option>
-                <option value="Imperial Script">Imperial Script</option>
-                <option value="Kapakana">Kapakana</option>
-                <option value="Kings">Kings</option>
-                <option value="Kolker Brush">Kolker Brush</option>
-                <option value="Kranky">Kranky</option>
-                <option value="Kristi">Kristi</option>
-                <option value="La Belle Aurore">La Belle Aurore</option>
-                <option value="Lavishly Yours">Lavishly Yours</option>
-                <option value="League Script">League Script</option>
-              </select>
-            </div> */}
 
             <div className="custom-dropdown">
               <button className="dropdown-btn">{font}</button>
