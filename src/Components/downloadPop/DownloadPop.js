@@ -4,7 +4,6 @@ import Modal from 'react-modal';
 import strings from '../utils/Downloadpop.json';
 import './DownloadPop.css';  
 import close from '../assets/images/Vector.png';
-import downloadicon from '../assets/images/icon.png';
 
 const Download = ({ isOpen,certificate, onRequestClose,downloadAsPDF,downloadAsImage}) => {
 
@@ -13,8 +12,8 @@ const Download = ({ isOpen,certificate, onRequestClose,downloadAsPDF,downloadAsI
       <div className="container"> 
         <nav>
           <div className="navLeft">
-            <h1>{strings.successTitle}</h1>
-            <h5>{strings.successMessage}</h5>
+            <h1 className='sucsTitle'>{strings.successTitle}</h1>
+            <h5 className='sucsMsg'>{strings.successMessage}</h5>
           </div>
           <div className="close">
             <img onClick={onRequestClose} src={close} alt="Close" className="close-img" />
@@ -32,7 +31,6 @@ const Download = ({ isOpen,certificate, onRequestClose,downloadAsPDF,downloadAsI
               <button onClick={onRequestClose} className="btn1">{strings.editButtonText}</button>
               <button className="btn2" onClick={downloadAsImage}>
                 {strings.downloadImageButtonText} 
-                <img src={downloadicon} alt="icon" className="icon" /> 
               </button>
               <button className="btn3" onClick={downloadAsPDF}>{strings.downloadPdfButtonText}</button>
             </div>

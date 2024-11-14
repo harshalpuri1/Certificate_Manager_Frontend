@@ -13,9 +13,9 @@
 .container {
   background-color: rgb(255, 255, 255);
   width: 80%;
-  max-width: 1200px;
-  height: 90%;
-  max-height: 700px;
+  max-width: 940px;
+  height: auto;
+  max-height: 90%;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -36,6 +36,14 @@ nav {
   font-size: 1.2rem;
   color: #132A52;
 }
+.sucsTitle {
+  margin: 10px 0;
+  padding: 0;
+}
+.sucsMsg {
+  margin: 10px 0;
+  padding: 0;
+}
 
 .close {
   padding: 15px;
@@ -49,7 +57,7 @@ nav {
 
 .flex-container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -67,7 +75,6 @@ nav {
 
 .main-inner {
   flex: 1;
-  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -199,13 +206,6 @@ nav {
   flex: 0 1 auto;
   width: 100%;
   max-width: 300px;
-  margin-left: 0;
-}
-
-@media(min-width: 768px) {
-  .rightBox {
-    margin-left: 10px;
-  }
 }
 
 .rightBox .btnBox {
@@ -214,12 +214,12 @@ nav {
   border: 2px solid rgb(235, 235, 235);
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgb(235, 235, 235);
-  padding: 10px;
+  padding-bottom: 2rem;
 }
 
 .btnBox h4 {
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 95%;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
@@ -240,8 +240,7 @@ nav {
 .btn1,
 .btn2,
 .btn3 {
-  width: 100%;
-  max-width: 200px;
+  width: 80%;
   height: 40px;
   border-radius: 5px;
   cursor: pointer;
@@ -252,7 +251,6 @@ nav {
   background-color: #132A52;
   color: white;
   position: relative;
-  padding-right: 20px;
 }
 
 .btn2 img {
@@ -306,4 +304,73 @@ nav {
 
 .file-detail h3 span {
   color: #132A52;
+}
+
+
+@media(max-width: 768px) {
+
+  .rightBox {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .container {
+    height: auto;
+    padding: 5px;
+
+  }
+
+  .flex-container {
+    padding: 10px;
+    padding-top: 0;
+  }
+
+  .sucsTitle {
+    font-size: 3vw;
+    margin-bottom: 0;
+  }
+
+  .sucsMsg {
+    font-size: 2vw;
+    margin-top: 0;
+  }
+
+.btnBox h4 {
+  font-size: 3vw;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 0;
+
+}
+
+  .main-inner{
+    width: 100%;
+    min-width: 100%;
+  }
+  .btn1, .btn2, .btn3 {
+    width: 80%;
+    height: 40px;
+    font-size: 2.2vw;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { 
+  .rightBox{
+    min-width: 35%;
+  }
+  .main-inner{
+    min-width: 65%;
+  }
+  .container {
+    width: 85%;
+    height: auto;
+    padding: 5px;
+
+  }
+
 }
