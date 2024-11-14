@@ -117,15 +117,15 @@ const Certificate = () => {
         const certificateElement = document.querySelector(
           ".certificate-manager"
         );
-        const scale = 4;
+        const scale = 2;
         const canvas = await html2canvas(certificateElement, {
           useCORS: true,
           scale: scale,
         });
 
-        const image = canvas.toDataURL("image/png");
-        const pdf = new jsPDF("landscape");
-        pdf.addImage(image, "PNG", 0, 0, 300, 210);
+        const image = canvas.toDataURL("image/png",0.8);
+        const pdf = new jsPDF("landscape", "mm", "a4");
+        pdf.addImage(image, "PNG", 0, 0, 297, 210);
         pdf.save(`${recipientName} certificate.pdf`);
       } else {
         const zip = new JSZip();
@@ -134,15 +134,15 @@ const Certificate = () => {
           const certificateElement = document.querySelector(
             ".certificate-manager"
           );
-          const scale = 4;
+          const scale = 2;
           const canvas = await html2canvas(certificateElement, {
             useCORS: true,
             scale: scale,
           });
 
-          const image = canvas.toDataURL("image/png");
-          const pdf = new jsPDF("landscape");
-          pdf.addImage(image, "PNG", 0, 0, 300, 210);
+          const image = canvas.toDataURL("image/png",0.8);
+          const pdf = new jsPDF("landscape", "mm", "a4");
+          pdf.addImage(image, "JPEG", 0, 0, 297, 210);
 
           const pdfBlob = pdf.output("blob");
           zip.file(`${recipientName} certificate.pdf`, pdfBlob);
