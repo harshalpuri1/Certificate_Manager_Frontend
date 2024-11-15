@@ -111,20 +111,28 @@ const Certificate = () => {
     }
     const toastId = toast.loading(strings.genCertificate);
     try {
+      const screenWidth = window.innerWidth;
+      let scale;
+      if (screenWidth > 1024) {
+        scale = 3;
+      } else if (screenWidth > 768 && screenWidth <= 1024) {
+        scale = 2;
+      } else {
+        scale = 4;
+      }
       if (names.length === 1) {
         const recipientName = names[0];
         document.querySelector(".recipient-name").innerText = recipientName;
         const certificateElement = document.querySelector(
           ".certificate-manager"
         );
-        const scale = 2;
         const canvas = await html2canvas(certificateElement, {
           useCORS: true,
           scale: scale,
         });
 
-        const image = canvas.toDataURL("image/png",0.8);
-        const pdf = new jsPDF("landscape", "mm", "a4");
+        const image = canvas.toDataURL("image/png");
+        const pdf = new jsPDF("landscape");
         pdf.addImage(image, "PNG", 0, 0, 297, 210);
         pdf.save(`${recipientName} certificate.pdf`);
       } else {
@@ -134,14 +142,13 @@ const Certificate = () => {
           const certificateElement = document.querySelector(
             ".certificate-manager"
           );
-          const scale = 2;
           const canvas = await html2canvas(certificateElement, {
             useCORS: true,
             scale: scale,
           });
 
-          const image = canvas.toDataURL("image/png",0.8);
-          const pdf = new jsPDF("landscape", "mm", "a4");
+          const image = canvas.toDataURL("image/png");
+          const pdf = new jsPDF("landscape");
           pdf.addImage(image, "JPEG", 0, 0, 297, 210);
 
           const pdfBlob = pdf.output("blob");
