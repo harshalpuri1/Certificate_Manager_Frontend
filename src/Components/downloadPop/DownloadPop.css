@@ -61,7 +61,8 @@ nav {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 30px;
+  padding: 20px;
+  column-count: 2;
   column-gap: 19px;
 }
 
@@ -361,7 +362,7 @@ nav {
 
 @media (min-width: 768px) and (max-width: 1024px) { 
   .rightBox{
-    min-width: 35%;
+    min-width: 30%;
   }
   .main-inner{
     min-width: 65%;
