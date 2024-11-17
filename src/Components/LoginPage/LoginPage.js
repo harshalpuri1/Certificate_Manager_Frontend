@@ -94,7 +94,7 @@ function LoginPage() {
             <div className="formInput">
               <label htmlFor={strings.email1}>{strings.email}</label>
               <input
-                type="email"
+                type="text"
                 id={strings.email1}
                 className="Input"
                 name={strings.email1}
