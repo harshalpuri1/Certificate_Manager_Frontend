@@ -94,8 +94,9 @@ function LoginPage() {
             <div className="formInput">
               <label htmlFor={strings.email1}>{strings.email}</label>
               <input
-                type="text"
+                type="email"
                 id={strings.email1}
+                className="Input"
                 name={strings.email1}
                 placeholder={strings.enteremail}
                 value={email}
@@ -111,6 +112,8 @@ function LoginPage() {
                 <input
                   type={showPassword ? "text" : "password"}
                   id={strings.password}
+                  className="Input"
+
                   name={strings.password}
                   placeholder={strings.enterPassword}
                   value={password}

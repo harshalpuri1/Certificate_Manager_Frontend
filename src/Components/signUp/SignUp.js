@@ -39,7 +39,7 @@ function SignUp() {
 
     return Object.keys(newErrors).length === 0;
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -89,6 +89,7 @@ function SignUp() {
             <div className="formInput">
               <label htmlFor={strings.email1}>{strings.email}</label>
               <input
+                className="Input"
                 type="text"
                 id={strings.email1}
                 name={strings.email1}
@@ -104,7 +105,8 @@ function SignUp() {
               <label htmlFor={strings.password}>{strings.password}</label>
               <div className="password-wrapper">
                 <input
-                  type={showPassword ? "text" : "password"}
+                className="Input"
+                type={showPassword ? "text" : "password"}
                   id={strings.password}
                   name={strings.password}
                   placeholder={strings.enterPassword}
@@ -125,6 +127,7 @@ function SignUp() {
                 <input
                   type={showConfirmPassword ? "text" : "Password"}
                   id={strings.confirmPassword}
+                  className="Input"
                   name={strings.confirmPassword}
                   placeholder={strings.entercnfrmPassword}
                   value={confirmPassword}

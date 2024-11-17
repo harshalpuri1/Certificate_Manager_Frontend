@@ -5,7 +5,7 @@ import api from "../services/api";
 import { toast } from "react-toastify";
 function ForgotPassword() {
   const [email, setEmail] = useState("");
-  const [otp, setOtp] = useState(""); 
+  const [otp, setOtp] = useState("");
   const [step, setStep] = useState(1); // Track the step in the forgot password flow
   const [errors, setErrors] = useState({});
   const nav = useNavigate();
@@ -120,6 +120,7 @@ function ForgotPassword() {
                 type="text"
                 id={strings.email1}
                 name={strings.email1}
+                className="Input"
                 placeholder={strings.enterEmail}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -141,6 +142,7 @@ function ForgotPassword() {
             <div className="formInput">
               <label htmlFor="otp">{strings.otp}</label>
               <input
+                className="Input"
                 type="text"
                 id="otp"
                 placeholder={strings.enterOtp}
@@ -156,9 +158,9 @@ function ForgotPassword() {
         )}
 
         <div className="form-footer">
-          <span onClick={() => nav(strings.signin)}>
-            {strings["back-to-login"]} <span>{strings.Signin}</span>
-          </span>
+          <p onClick={() => nav(strings.signin)}>
+            {strings["back-to"]} <span>{strings.Signin}</span>
+          </p>
         </div>
       </div>
     </div>

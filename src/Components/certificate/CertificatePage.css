@@ -129,12 +129,10 @@ h2 {
   margin-top: 20px;
   margin-bottom: 8px;
   box-sizing: border-box;
-  /* Ensures padding is included in the box model */
 }
 
 .form-input {
   width: 100%;
-  /* Full width to match label box */
   padding: 15px;
   border-radius: 10px;
   border: 1px solid #8A9CBD;
@@ -144,7 +142,6 @@ h2 {
   background: #FFFFFF;
   color: #A4A4A4;
   box-sizing: border-box;
-  /* Include padding and border in width */
   align-items: center;
 }
 
@@ -236,6 +233,7 @@ textarea.form-input {
   text-align: center;
   font-family: serif;
   font-size: 2vw;
+  font-weight: 550;
   justify-content: space-around;
   width: 90%;
 
@@ -273,6 +271,7 @@ textarea.form-input {
   transform: translateX(-50%);
   height: 6vw;
   object-fit: cover;
+  mix-blend-mode: normal;
   /* border-radius: 50%; */
   background-color: transparent;
   overflow: hidden;
@@ -380,7 +379,7 @@ textarea.form-input {
   .description {
     width: 80%;
   }
-  
+
   .certificate-signature {
     width: 10vw;
   }
@@ -394,7 +393,6 @@ textarea.form-input {
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
-  /* Adjust layout for tablet */
   .certificate-page {
     display: flex;
     flex-direction: column;
@@ -488,41 +486,28 @@ textarea.form-input {
 }
 
 
-/* Custom Dropdown Button */
 .custom-dropdown {
   position: relative;
   display: inline-block;
   width: 100%;
-  /* Full width for consistency */
   height: 50px;
 }
 
 .dropdown-btn {
   width: 100%;
-  /* Full width for consistency */
   height: 50px;
-  /* Match the height of the generate button */
   border-radius: 10px;
-  /* Match the border-radius of the generate button */
   background-color: #EBF2FF;
-  /* Use the same background color */
   color: #132A52;
   font-family: 'Inter', sans-serif;
-  /* Match font style */
   font-size: 16px;
-  /* Font size consistent with the generate button */
   font-weight: 300;
-  /* Regular font weight */
   border: 1px solid #8A9CBD;
   cursor: pointer;
-  /* Pointer cursor on hover */
   text-align: left;
-  /* Text alignment for the button */
   padding-left: 16px;
-  /* Add some padding to the left for alignment */
 }
 
-/* Dropdown Options */
 .dropdown-options {
   display: none;
   position: absolute;
@@ -530,12 +515,9 @@ textarea.form-input {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   width: 100%;
-  /* Full width to match the button */
   max-height: 200px;
   overflow-y: auto;
-  /* Add scrollbar */
   border-radius: 10px;
-  /* Match the button border-radius */
 }
 
 .custom-dropdown:hover .dropdown-options {
@@ -544,7 +526,6 @@ textarea.form-input {
 
 .dropdown-option {
   padding: 16px;
-  /* Match padding for consistency */
   cursor: pointer;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
@@ -553,5 +534,4 @@ textarea.form-input {
 
 .dropdown-option:hover {
   background-color: #f1f1f1;
-  /* Light background on hover for options */
 }
